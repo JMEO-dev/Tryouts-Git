@@ -26,21 +26,21 @@ const authRouter = require("./api/auth/auth.js");
 
 // app.use("/employeeList", authRouter)
 
-app.get("/employeeList", (req, res) => {
-  let employees = [];
+// app.get("/employeeList", (req, res) => {
+//   let employees = [];
 
-  db.collection("employee")
-    .find() // cursor toArray forEach
-    .forEach((employee) => employees.push(employee))
-    .then(() => {
-      res
-        .status(200)
-        .json({ status: 200, msg: "Employee List", employees: employees });
-    })
-    .catch(() => {
-      res.status(500).json({ error: "Could not fatch the documents" });
-    });
-});
+//   db.collection("employee")
+//     .find() // cursor toArray forEach
+//     .forEach((employee) => employees.push(employee))
+//     .then(() => {
+//       res
+//         .status(200)
+//         .json({ status: 200, msg: "Employee List", employees: employees });
+//     })
+//     .catch(() => {
+//       res.status(500).json({ error: "Could not fatch the documents" });
+//     });
+// });
 
 // EMPLOYEE LIST
 app.post("/employeeList", (req, res) => {
