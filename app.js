@@ -21,8 +21,7 @@ connectToDb((err) => {
   }
 });
 
-
-const authRouter = require("./api/auth/auth.js")
+const authRouter = require("./api/auth/auth.js");
 
 // app.use("/employeeList", authRouter)
 
@@ -33,7 +32,9 @@ app.get("/employeeList", (req, res) => {
     .find() // cursor toArray forEach
     .forEach((employee) => employees.push(employee))
     .then(() => {
-      res.status(200).json(employees);
+      res
+        .status(200)
+        .json({ status: 200, msg: "Employee List", employees: employees });
     })
     .catch(() => {
       res.status(500).json({ error: "Could not fatch the documents" });
