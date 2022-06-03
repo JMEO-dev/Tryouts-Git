@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 
 let dbConnection;
 let uri =
-  "mongodb+srv://jamal:Nm0lqn7ewEFTAVQE@cluster0.adbab.mongodb.net/LoginReg?retryWrites=true&w=majority";
+  "mongodb+srv://jamal:BlTGiIVyBRuU8Q3H@cluster0.adbab.mongodb.net/LoginReg?retryWrites=true&w=majority";
 
 module.exports = {
   connectToDb: (cb) => {
